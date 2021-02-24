@@ -9,20 +9,25 @@ namespace C_Blunt
 {
     class OperationNode
     {
-        dynamic leftNode;
-        Tokens operationToken;
-        dynamic rightNode;
+        public dynamic leftNode;
+        public Tokens token;
+        public dynamic rightNode;
+        public Position start;
+        public Position end;
 
         public OperationNode(dynamic leftNode_, Tokens operationToken_, dynamic rightNode_)
         {
             leftNode = leftNode_;
-            operationToken = operationToken_;
+            token = operationToken_;
             rightNode = rightNode_;
+
+            start = leftNode.start;
+            end = rightNode.end;
         }
 
         public string print()
         {
-            return "(" + leftNode.print() + ", " + operationToken.type + ", " + rightNode.print() + ")";
+            return "(" + leftNode.print() + ", " + token.type + ", " + rightNode.print() + ")";
         }
     }
 }

@@ -61,12 +61,14 @@ namespace C_Blunt
 
             if (count == 0)
             {
-                Tokens this_token = new Tokens(Tokens.tInt, num, start, pos);
+                int num_int = Int32.Parse(num);
+                Tokens this_token = new Tokens(Tokens.tInt, num_int, start, pos);
                 return this_token;
             }
             else
             {
-                Tokens this_token = new Tokens(Tokens.tFloat, num, start, pos);
+                float num_float = float.Parse(num);
+                Tokens this_token = new Tokens(Tokens.tFloat, num_float, start, pos);
                 return this_token;
             }
         }

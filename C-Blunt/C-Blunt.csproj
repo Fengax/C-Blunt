@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context.cs" />
     <Compile Include="Errors.cs" />
+    <Compile Include="Interpreter.cs" />
     <Compile Include="Lexer.cs" />
+    <Compile Include="Number.cs" />
     <Compile Include="NumberNode.cs" />
     <Compile Include="OperationNode.cs" />
     <Compile Include="Parser.cs" />
@@ -52,6 +55,7 @@
     <Compile Include="Position.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RuntimeResult.cs" />
     <Compile Include="Tokens.cs" />
     <Compile Include="UnaryNode.cs" />
   </ItemGroup>

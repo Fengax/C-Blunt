@@ -18,3 +18,10 @@ C:\Users\85751\Desktop\test\C-Blunt\C-Blunt\obj\Debug\C-Blunt.csprojAssemblyRefe
 C:\Users\85751\Desktop\test\C-Blunt\C-Blunt\obj\Debug\C-Blunt.csproj.CoreCompileInputs.cache
 C:\Users\85751\Desktop\test\C-Blunt\C-Blunt\obj\Debug\C-Blunt.exe
 C:\Users\85751\Desktop\test\C-Blunt\C-Blunt\obj\Debug\C-Blunt.pdb
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\bin\Debug\C-Blunt.exe.config
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\bin\Debug\C-Blunt.exe
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\bin\Debug\C-Blunt.pdb
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\obj\Debug\C-Blunt.csprojAssemblyReference.cache
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\obj\Debug\C-Blunt.csproj.CoreCompileInputs.cache
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\obj\Debug\C-Blunt.exe
+C:\Users\85751\Desktop\C-Blunt\C-Blunt\obj\Debug\C-Blunt.pdb

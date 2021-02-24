@@ -8,10 +8,14 @@ namespace C_Blunt
 {
     class NumberNode
     {
+        public Position start;
+        public Position end;
         public Tokens token;
         public NumberNode(Tokens token_)
         {
             token = token_;
+            start = token.start;
+            end = token.end;
         }
 
         public string print()

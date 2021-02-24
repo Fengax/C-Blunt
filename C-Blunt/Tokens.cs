@@ -9,7 +9,7 @@ namespace C_Blunt
     class Tokens
     {
         public string type;
-        string value = null;
+        public dynamic value = null;
 
         public static string tInt = "tInt";
         public static string tFloat = "tFloat";
@@ -24,7 +24,7 @@ namespace C_Blunt
         public Position start;
         public Position end;
 
-        public Tokens(string type_, string value_, Position pos_start_ = null, Position pos_end_ = null)
+        public Tokens(string type_, dynamic value_, Position pos_start_ = null, Position pos_end_ = null)
         {
             type = type_;
             value = value_;
@@ -46,7 +46,7 @@ namespace C_Blunt
         {
             if (value != null)
             {
-                return type + ":" + value;
+                return type + ":" + value.ToString();
             }
             else
             {

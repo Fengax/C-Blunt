@@ -21,30 +21,36 @@ namespace C_Blunt
 
             Parser parser = new Parser(tokens);
             dynamic syntaxTree = parser.parse();
+            if (error != null)
+            {
+                return (null, error);
+            }
 
-            return (syntaxTree.node, syntaxTree.error);
+            Interpreter interpreter = new Interpreter();
+            Context context = new Context("<program>");
+            dynamic result = interpreter.visit(syntaxTree.node, context);
+
+            return (result.value, result.error);
             
         }
         static void Main(string[] args)
         {
-            Console.Write("text: ");
-            string text = Console.ReadLine();
-            dynamic error;
-            dynamic results;
-
-            (results, error) = run("testFile", text);
-            if (error != null)
-            {
-                Console.WriteLine(error.print());
-            }
-            else
-            {
-                Console.WriteLine(results.print());
-            }
-
             while (true)
             {
+                Console.Write("text: ");
+                string text = Console.ReadLine();
+                dynamic error;
+                dynamic results;
 
+                (results, error) = run("testFile", text);
+                if (error != null)
+                {
+                    Console.WriteLine(error.print());
+                }
+                else
+                {
+                    Console.WriteLine(results.print());
+                }
             }
         }
     }

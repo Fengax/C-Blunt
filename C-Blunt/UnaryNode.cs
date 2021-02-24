@@ -8,17 +8,21 @@ namespace C_Blunt
 {
     class UnaryNode
     {
-        Tokens operationToken;
-        dynamic node;
+        public Tokens token;
+        public dynamic node;
+        public Position start;
+        public Position end;
         public UnaryNode(Tokens operationToken_, dynamic node_)
         {
-            operationToken = operationToken_;
+            token = operationToken_;
             node = node_;
+            start = token.start;
+            end = node.end;
         }
 
         public string print()
         {
-            return "(" + operationToken.print() + ", " + node.print() + ")";
+            return "(" + token.print() + ", " + node.print() + ")";
         }
     }
 }

@@ -8,10 +8,10 @@ namespace C_Blunt
 {
     class Errors
     {
-        Position start;
-        Position end;
-        string error_name;
-        string details;
+        public Position start;
+        public Position end;
+        public string error_name;
+        public string details;
         public Errors(Position start_, Position end_, string error_name_, string details_)
         {
             start = start_;
@@ -96,6 +96,39 @@ namespace C_Blunt
         public InvalidSyntaxError(Position start_, Position end_, string details_) : base(start_, end_, "Invalid Syntax Error", details_)
         {
 
+        }
+    }
+
+    class RuntimeError : Errors
+    {
+        Context context;
+        public RuntimeError(Position start_, Position end_, string details_, Context context_) : base(start_, end_, "Runtime Error", details_)
+        {
+            context = context_;
+        }
+
+        public string print()
+        {
+            string error_msg = generateTraceback();
+            error_msg += error_name + ": " + details + '\n' + "File " + start.fileName + ", line " + (start.line + 1).ToString();
+            //error_msg += '\n' + '\n' + arrows(start.fileText, start, end);
+            return error_msg;
+        }
+
+        private string generateTraceback()
+        {
+            string result = "";
+            Position start_ = start;
+            Context context_ = context;
+
+            while(context_ != null)
+            {
+                result = "File " + start_.fileName + " line " + (start_.line + 1).ToString() + " in " + context.displayName + "\n" + result;
+                start_ = context.parent_entry;
+                context_ = context_.parent;
+            }
+
+            return "Traceback: \n" + result;
         }
     }
 }
