@@ -61,10 +61,12 @@ namespace C_Blunt
         {
             if (otherNum is Number)
             {
+                
                 if (value == (int)value && otherNum.value == (int)otherNum.value)
                 {
                     value = value * 1.0;
                 }
+                
 
                 if (otherNum.value == 0 || otherNum.value == 0.0)
                 {
